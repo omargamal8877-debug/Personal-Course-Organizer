@@ -1,0 +1,103 @@
+:root{
+    --primary-color:#2c3e50;
+    --accent-color:#3498db;
+    --bg-color:#f4f7f6;
+    --text-color:#333
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding:0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: var(--bg-color);
+    color:var(--text-color);
+    line-height: 1.6;
+}
+header{
+    background-color: var(--primary-color);
+    color:white;
+    padding: 20px 0px;
+    text-align: center;
+}
+nav{
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+}
+nav a{
+    color:white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+nav a :hover{
+    background-color: var(--accent-color);
+}
+main{
+    max-width: 900px;
+    margin: 30px auto;
+    padding:20px;
+    border-radius: 8px;
+}
+table{
+    width: 100%;
+    margin-top: 20px;
+}
+table tr , table td{
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center ;
+}
+table th{
+    background-color:black;
+    color:white;
+}
+table tr :hover{
+    background-color: #f1f9ff;
+}
+label{
+    display: block;
+    margin-bottom:5px;
+    font-weight: bold;
+}
+textarea{
+    width: 250px;
+}
+button{
+    width: 174px;
+    margin-top: 12px;
+    display: block;
+}
+button :hover{
+    background-color: #2980b9;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 600px){
+    nav{
+        flex-direction: column;
+    }
+    main{
+        margin: 10px;
+        padding: 15px ;
+    }
+}
+.intro{
+    text-align: center;
+}
+ul{
+    font-weight: bold;
+}
+.click{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
