@@ -9,11 +9,13 @@
     margin: 0px;
     padding:0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 body{
     background-color: var(--bg-color);
     color:var(--text-color);
     line-height: 1.6;
+    background: radial-gradient(circle 800px at top left, #409af4bf, transparent 40%)
 }
 header{
     background-color: var(--primary-color);
@@ -32,9 +34,29 @@ nav a{
     color:white;
     text-decoration: none;
     padding: 15px 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
 }
-nav a :hover{
-    background-color: var(--accent-color);
+nav a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #f1c40f;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+nav a:hover::before{
+    width: 100%;
+}
+nav a:hover{
+    background-color: #2980b9;
+    color:white;
+    border-radius: 4px;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 main{
     max-width: 900px;
@@ -81,9 +103,9 @@ footer{
     color: white;
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
     nav{
-        flex-direction: column;
+        flex-direction: row;
     }
     main{
         margin: 10px;
@@ -100,4 +122,25 @@ ul{
     text-align: center;
     margin-top: 40px;
     margin-bottom: 50px;
+}
+.view-btn{
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+button{
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+input{
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
 }
