@@ -102,6 +102,10 @@ footer{
     background-color: var(--primary-color);
     color: white;
 }
+#save:hover{
+    background-color: #2980b9;
+
+}
 
 @media (max-width: 800px){
     nav{
